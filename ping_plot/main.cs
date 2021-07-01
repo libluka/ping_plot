@@ -72,6 +72,8 @@ namespace ping_plot
 
             refresh_rate_label.Text = "Refresh rate: " + __ping_refresh_rate.ToString() + "ms";
 
+            this.Text = "ping_plot - " + __target_server;
+
             ping_worker.RunWorkerAsync();
         }
 

@@ -46,6 +46,7 @@ namespace ping_plot
 
             this.MinimumSize = new Size(1000, 500);
         }
+        /*commit*/
 
         private void main_Load(object sender, EventArgs e)
         {

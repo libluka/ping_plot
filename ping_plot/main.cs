@@ -42,8 +42,9 @@ namespace ping_plot
             ping_plot_obj.Configuration.LockVerticalAxis = true;
             ping_plot_obj.Configuration.Quality = ScottPlot.Control.QualityMode.High;
 
-
             ping_worker.WorkerReportsProgress = true;
+
+            this.MinimumSize = new Size(1000, 500);
         }
 
         private void main_Load(object sender, EventArgs e)
@@ -67,6 +68,8 @@ namespace ping_plot
                 MessageBox.Show("Refresh rate must be a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
+
+            refresh_rate_label.Text = "Refresh rate: " + __ping_refresh_rate.ToString() + "ms";
 
             ping_worker.RunWorkerAsync();
         }
@@ -118,11 +121,6 @@ namespace ping_plot
 
             current_ping_label.Text = "Ping: " + round_trip + "ms";
             average_ping_label.Text = "Average: " + average_ping + "ms";
-
-        }
-
-        private void current_ping_label_Click(object sender, EventArgs e)
-        {
 
         }
     }

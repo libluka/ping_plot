@@ -48,6 +48,7 @@ namespace ping_plot
             this.ping_plot_obj.Name = "ping_plot_obj";
             this.ping_plot_obj.Size = new System.Drawing.Size(984, 441);
             this.ping_plot_obj.TabIndex = 0;
+            this.ping_plot_obj.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ping_plot_obj_KeyDown);
             // 
             // ping_worker
             // 
@@ -61,7 +62,7 @@ namespace ping_plot
             this.average_ping_label.BackColor = System.Drawing.Color.Black;
             this.average_ping_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.average_ping_label.ForeColor = System.Drawing.Color.White;
-            this.average_ping_label.Location = new System.Drawing.Point(155, 430);
+            this.average_ping_label.Location = new System.Drawing.Point(155, 425);
             this.average_ping_label.Name = "average_ping_label";
             this.average_ping_label.Size = new System.Drawing.Size(144, 25);
             this.average_ping_label.TabIndex = 1;
@@ -74,7 +75,7 @@ namespace ping_plot
             this.current_ping_label.BackColor = System.Drawing.Color.Black;
             this.current_ping_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.current_ping_label.ForeColor = System.Drawing.Color.White;
-            this.current_ping_label.Location = new System.Drawing.Point(12, 430);
+            this.current_ping_label.Location = new System.Drawing.Point(12, 425);
             this.current_ping_label.Name = "current_ping_label";
             this.current_ping_label.Size = new System.Drawing.Size(107, 25);
             this.current_ping_label.TabIndex = 2;
@@ -87,7 +88,7 @@ namespace ping_plot
             this.measured_avg_label.BackColor = System.Drawing.Color.Black;
             this.measured_avg_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.measured_avg_label.ForeColor = System.Drawing.Color.White;
-            this.measured_avg_label.Location = new System.Drawing.Point(335, 430);
+            this.measured_avg_label.Location = new System.Drawing.Point(335, 425);
             this.measured_avg_label.Name = "measured_avg_label";
             this.measured_avg_label.Size = new System.Drawing.Size(238, 25);
             this.measured_avg_label.TabIndex = 3;
@@ -100,7 +101,7 @@ namespace ping_plot
             this.refresh_rate_label.BackColor = System.Drawing.Color.Black;
             this.refresh_rate_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh_rate_label.ForeColor = System.Drawing.Color.White;
-            this.refresh_rate_label.Location = new System.Drawing.Point(609, 430);
+            this.refresh_rate_label.Location = new System.Drawing.Point(609, 425);
             this.refresh_rate_label.Name = "refresh_rate_label";
             this.refresh_rate_label.Size = new System.Drawing.Size(182, 25);
             this.refresh_rate_label.TabIndex = 4;

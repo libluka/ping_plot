@@ -45,6 +45,8 @@ namespace ping_plot
             ping_worker.WorkerReportsProgress = true;
 
             this.MinimumSize = new Size(1000, 500);
+
+            __form_state = new FormState();
         }
         /*commit*/
 
@@ -130,6 +132,29 @@ namespace ping_plot
             current_ping_label.Text = "Ping: " + round_trip + "ms";
             average_ping_label.Text = "Average: " + average_ping + "ms";
 
+        }
+
+        private FormState __form_state;
+
+        private void ping_plot_obj_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F11)
+            {
+
+                if (this.WindowState == FormWindowState.Maximized
+                    && this.FormBorderStyle == FormBorderStyle.None)
+                {
+                    __form_state.apply_form_state(this);
+
+                    e.Handled = true;
+                    return;
+                }
+
+                __form_state.set_form_state(this);
+
+                this.WindowState = FormWindowState.Maximized;
+                this.FormBorderStyle = FormBorderStyle.None;
+            }
         }
     }
 }

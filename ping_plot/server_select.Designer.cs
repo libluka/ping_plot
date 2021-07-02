@@ -92,6 +92,7 @@ namespace ping_plot
             this.ping_rate_textbox.Size = new System.Drawing.Size(68, 29);
             this.ping_rate_textbox.TabIndex = 4;
             this.ping_rate_textbox.Text = "100";
+            this.ping_rate_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ping_rate_textbox_KeyDown);
             // 
             // server_select
             // 

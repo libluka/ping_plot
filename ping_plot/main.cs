@@ -104,6 +104,11 @@ namespace ping_plot
 
             measured_avg_label.Text = "Measured Avg Count: " + true_data_num;
 
+            if(true_data_num == 0 || hold == 0)
+            {
+                return 0;
+            }
+
             return hold / true_data_num;
         }
 

@@ -39,19 +39,27 @@ namespace ping_plot
             return this.__ping_refresh_rate;
         }
 
-        private void server_address_textbox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-            {
-                this.self_exit();
-            }
-        }
-
         private void self_exit()
         {
             __server_address = server_address_textbox.Text;
             __ping_refresh_rate = Int32.Parse(ping_rate_textbox.Text);
             this.Hide();
+        }
+
+        private void server_address_textbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.self_exit();
+            }
+        }
+
+        private void ping_rate_textbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.self_exit();
+            }
         }
     }
 }
